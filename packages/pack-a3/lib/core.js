@@ -8,10 +8,12 @@ var Core = (function(){
     }
 
     Core.prototype.where = function(list, properties){
+        debug("executing where()...");
         return this._.where(list, properties);
     };
 
     Core.prototype.sortBy = function(list, iteratee){
+        debug("executing sortBy()...");
         return this._.sortBy(list, iteratee);
     };
 

@@ -9,7 +9,7 @@ var PackA2 = (function(){
     }
 
     PackA2.prototype.whoami = function(){
-        debug("PackA2.test1()");
+        debug("PackA2.whoami()");
         return this._name;
     };
 

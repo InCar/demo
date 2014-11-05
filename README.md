@@ -75,5 +75,61 @@ package.json中支持一些特定的scripts <https://www.npmjs.org/doc/misc/npm-
 ### .npmignore
 使用.npmignore文件排除发布时不需要的文件,比如测试文件
 
-# @test/pack-a3
-这个例子同时引用了 **@test/pack-2** 和 **co**
+### @test/pack-a3
+这个例子同时引用了 **@test/pack-2** 和 **debug** **underscore**
+
+完整的 [@test/pack-a3/package.json](https://github.com/InCar/demo/blob/master/packages/pack-a3/package.json)
+
+### 习惯布局
+通常 ./lib/ 下存放主要的源代码, ./index.js记录导出对象
+
+所有的测试文件存放在 ./test/ 下,.npmignore通常排除掉test里的内容
+
+### 常用的一种JS模式
+这可以把nodejs代码组合得整洁.
+
+    var Core = (function(){
+        function Core(){
+            this._ = require('underscore');
+        }
+
+        Core.prototype.where = function(list, properties){
+            debug("executing where()...");
+            return this._.where(list, properties);
+        };
+
+        Core.prototype.sortBy = function(list, iteratee){
+            debug("executing sortBy()...");
+            return this._.sortBy(list, iteratee);
+        };
+
+        return Core;
+    })();
+
+    module.exports = Core;
+
+如果模块比较小,直接这样就足够,使用时:
+
+    var Core = require('./lib/core');
+    var core = new Core();
+    core.where(...);
+    core.sort(...)
+
+如果模块比较大,内部包含很多的内容,那么通常在外部再套一层对象
+
+    module.exports = {
+        Core : require('./lib/core'),
+        Ext: require('./lib/extension')
+        // ...more...
+    };
+
+然后这样使用
+
+    var PackA3 = require('@test/pack-a3');
+    var core = new PackA3.Core();
+    core.where(...);
+    core.sort(...);
+
+    var ext = new PackA3.Ext();
+    ext.foo(...);
+

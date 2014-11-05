@@ -1,6 +1,6 @@
 {
   "name": "@test/pack-a3",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Demo how to reference other private package and public package",
   "main": "index.js",
   "dependencies": {
