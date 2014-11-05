@@ -4,15 +4,16 @@ demo
 演示如何使用私有的npm
 
 这个演示包含了3个模块:
-* @test/pack-a 一个合乎规则的最小化的模块
-* @test/pack-a2 一个简单的模块,它引用其它了全局模块
-* @test/pack-a3 引用了其它私有模块和全局模块
+
+* [@test/pack-a](https://github.com/InCar/demo/tree/master/packages/pack-a)  一个合乎规则的最小化的模块
+* [@test/pack-a2](https://github.com/InCar/demo/tree/master/packages/pack-a2) 一个简单的模块,它引用其它了全局模块
+* [@test/pack-a3](https://github.com/InCar/demo/tree/master/packages/pack-a3) 引用了其它私有模块和全局模块
 
 # @test/pack-a
 一个最简单的NPM模块只需要2个文件
 
-  - [package.json  模块包描述](https://github.com/InCar/demo/blob/master/packages/pack-a/package.json)
-  - [index.js  模块功能,可以是任何名称,由packages.json里的main定义](https://github.com/InCar/demo/blob/master/packages/pack-a/index.js)
+  - [@test/pack-a/package.json](https://github.com/InCar/demo/blob/master/packages/pack-a/package.json) 模块包描述
+  - [@test/pack-a/index.js](https://github.com/InCar/demo/blob/master/packages/pack-a/index.js) 模块功能,可以是任何名称,由packages.json里的main定义
 
 package.json通常使用命令 `npm init` 产生,按提示填写必要的字段即可
 
@@ -49,7 +50,7 @@ package.json里最重要的字段是name和version
         "debug" : "2.*.*"
       }
 
-完整的 [package.json](https://github.com/InCar/demo/blob/master/packages/pack-a2/package.json)
+完整的 [@test/pack-a2/package.json](https://github.com/InCar/demo/blob/master/packages/pack-a2/package.json)
 
 ### scripts
 package.json中支持一些特定的scripts <https://www.npmjs.org/doc/misc/npm-scripts.html>
@@ -73,3 +74,6 @@ package.json中支持一些特定的scripts <https://www.npmjs.org/doc/misc/npm-
 
 ### .npmignore
 使用.npmignore文件排除发布时不需要的文件,比如测试文件
+
+# @test/pack-a3
+这个例子同时引用了 **@test/pack-2** 和 **co**

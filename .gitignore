@@ -6,4 +6,4 @@
 *.log
 
 ### npm_modules
-packages/pack-a2/node_modules/
+packages/*/node_modules/

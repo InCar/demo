@@ -1,0 +1,20 @@
+{
+  "name": "@test/pack-a3",
+  "version": "1.0.0",
+  "description": "Demo how to reference other private package and public package",
+  "main": "index.js",
+  "dependencies": {
+    "debug" : "2.*.*",
+    "underscore" : "1.7.*",
+    "@test/pack-a2": "1.*.*"
+  },
+  "scripts": {
+    "test": "node ./test"
+  },
+  "keywords": [
+    "test",
+    "pack-a"
+  ],
+  "author": "ghxiong",
+  "license": "MIT"
+}
