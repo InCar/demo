@@ -1,0 +1,15 @@
+{
+  "name": "@test/pack-a",
+  "version": "1.0.0",
+  "description": "Demo how to use private npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "test",
+    "pack-a"
+  ],
+  "author": "ghxiong",
+  "license": "MIT"
+}
