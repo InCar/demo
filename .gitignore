@@ -1,3 +1,9 @@
 # Created by .gitignore support plugin (hsz.mobi)
 ### JetBrains
 .idea/
+
+### Log files
+*.log
+
+### npm_modules
+packages/pack-a2/node_modules/
