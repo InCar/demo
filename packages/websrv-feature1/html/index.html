@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h1>Feature-1</h1>
+    <!--必须使用相对路径,因为外部模块会映射到某个子路径下-->
+    <img src="image/img-04.png">
+    <p>Feature1是一个独立的NPM包:@test/websrv-feature1</p><hr>
+    <span id="node-version"></span>
+    <!--常用的JS文件,使用CDN加速的minified版本-->
+    <script src="http://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <!--自己的JS文件不需要使用min版本,我们将会统一使用grunt来转换-->
+    <script src="scripts/index.js"></script>
+</body>
+</html>
