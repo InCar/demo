@@ -11,8 +11,3 @@ app.use(route);
 app.listen(config.port, function(){
     console.log("WebSrv is listening on " + config.port);
 });
-
-
-
-
-
