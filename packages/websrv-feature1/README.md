@@ -21,3 +21,12 @@ app.get('/api/node-version', nodeVersion.getNodeVersion);
 `
 
 <https://github.com/InCar/demo/tree/master/packages/websrv-feature1>
+
+### 运行此示例
+
+```
+git clone https://github.com/InCar/demo
+cd demo/packages/websrv
+npm install
+npm run test
+```
