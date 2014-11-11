@@ -32,3 +32,30 @@ npm install
 set DEBUG=@test/*
 npm run test
 ```
+
+## 输出调试信息
+使用debug模块来输出调试信息
+
+```javacript
+var debug = require('debug')('@test/websrv-feature1');
+```
+
+当DEBUG环境变量设置好后,即可以看到调试信息的输出
+
+```shell
+export DEBUG=@test/websrv-feature1 # LINUX
+或
+set DEBUG=@test/websrv-feature1 # Windows
+```
+
+## 开发过程中测试模块
+```shell
+cd ../websrv
+npm link ../websrv-feature1
+```
+npm link通过建立符号链接来保持子模块的同步,这样不需要频繁npm publish来进行测试
+
+测试完成后,使用`npm uninstall`断开链接
+```shell
+npm unlink @test/websrv-feature1
+```
