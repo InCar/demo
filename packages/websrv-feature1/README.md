@@ -28,5 +28,6 @@ app.get('/api/node-version', nodeVersion.getNodeVersion);
 git clone https://github.com/InCar/demo.git
 cd demo/packages/websrv
 npm install
+set DEBUG=@test/*
 npm run test
 ```
