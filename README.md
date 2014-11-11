@@ -3,11 +3,13 @@ demo
 
 演示如何使用私有的npm
 
-这个演示包含了3个模块:
+这个演示包含了5个模块:
 
 * [@test/pack-a](https://github.com/InCar/demo/tree/master/packages/pack-a)  一个合乎规则的最小化的模块
 * [@test/pack-a2](https://github.com/InCar/demo/tree/master/packages/pack-a2) 一个简单的模块,它引用其它了全局模块
 * [@test/pack-a3](https://github.com/InCar/demo/tree/master/packages/pack-a3) 引用了其它私有模块和全局模块
+* [@test/websrv](https://github.com/InCar/demo/tree/master/packages/websrv) 模块化的WEB服务器容器
+* [@test/websrv-feature1](https://github.com/InCar/demo/tree/master/packages/websrv-feature1) 模块化功能1
 
 # @test/pack-a
 一个最简单的NPM模块只需要2个文件
@@ -133,3 +135,25 @@ package.json中支持一些特定的scripts <https://www.npmjs.org/doc/misc/npm-
     var ext = new PackA3.Ext();
     ext.foo(...);
 
+# @test/websrv & @test/websrv-feature1
+websrv是一个WEB服务器的容器,它本身只监听端口,把收到的HTTP请求路由给具体的模块.
+websrv本身并不承担任何具体的功能.  
+<https://github.com/InCar/demo/tree/master/packages/websrv>
+
+websrv-feature1是一个精简的功能模块示例
+它自身也是一个完整的express模块,通过express的级联,成为websrv的一个子模块
+websrv-feature1展示一个标准的HTML网站
+websrv将它的根路由设置为`/web`
+
+`
+router.use('/web', feature1); // 配置feature1的根路由为/web
+`
+
+websrv-feature1将它自身的html文件夹设置为静态资源
+它访问了自身暴露出来的一个API接口
+
+`
+app.get('/api/node-version', nodeVersion.getNodeVersion);
+`
+
+<https://github.com/InCar/demo/tree/master/packages/websrv-feature1>
