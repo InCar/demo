@@ -1,10 +1,10 @@
 {
   "name": "@test/websrv",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "www server",
   "main": "websrv.js",
   "dependencies": {
-    "@test/websrv-feature1": "../websrv-feature1",
+    "@test/websrv-feature1": "^1.*.*",
     "debug": "2.*.*",
     "express": "4.*.*",
     "express-favicon": "1.*.*",
@@ -12,7 +12,7 @@
     "promise": "6.*.*"
   },
   "scripts": {
-    "test": "node websrv.js"
+    "test": "node ./websrv.js"
   },
   "repository": {
     "type": "git",
