@@ -4,20 +4,23 @@ websrv是一个WEB服务器的容器,它本身只监听端口,把收到的HTTP�
 websrv本身并不承担任何具体的功能.
 <https://github.com/InCar/demo/tree/master/packages/websrv>
 
-websrv-feature1是一个精简的功能模块示例
-它自身也是一个完整的express模块,通过express的级联,成为websrv的一个子模块
-websrv-feature1展示一个标准的HTML网站
-websrv将它的根路由设置为`/web`
+websrv使用了websrv-feature1模块,
+websrv-feature1是一个精简的功能模块
+websrv通过express的级联能力来使用websrv-feature1模块
 
-`
-router.use('/web', feature1); // 配置feature1的根路由为/web
-`
+```javascript
+var Express = require('express');
+var router = new Express.Router();
 
-websrv-feature1将它自身的html文件夹设置为静态资源
-它访问了自身暴露出来的一个API接口
+var feature1 = require('@test/websrv-feature1');
+router.use('/web', feature1);
+```
 
-`
-app.get('/api/node-version', nodeVersion.getNodeVersion);
-`
-
-<https://github.com/InCar/demo/tree/master/packages/websrv-feature1>
+## 运行此示例
+```SHELL
+git clone https://github.com/InCar/demo.git
+cd demo/packages/websrv
+npm install
+set DEBUG=@test/*
+npm run test
+```
