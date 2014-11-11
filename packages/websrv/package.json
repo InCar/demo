@@ -1,18 +1,18 @@
 {
   "name": "@test/websrv",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "www server",
   "main": "websrv.js",
   "dependencies": {
     "@test/websrv-feature1": "../websrv-feature1",
     "debug": "2.*.*",
     "express": "4.*.*",
-    "express-favicon": "^1.0.1",
+    "express-favicon": "1.*.*",
     "morgan-debug": "0.1.*",
     "promise": "6.*.*"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node websrv.js"
   },
   "repository": {
     "type": "git",
