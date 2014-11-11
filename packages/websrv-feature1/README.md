@@ -25,7 +25,7 @@ app.get('/api/node-version', nodeVersion.getNodeVersion);
 ### 运行此示例
 
 ```
-git clone https://github.com/InCar/demo
+git clone https://github.com/InCar/demo.git
 cd demo/packages/websrv
 npm install
 npm run test
