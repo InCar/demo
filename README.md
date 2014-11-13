@@ -159,3 +159,4 @@ app.get('/api/node-version', nodeVersion.getNodeVersion);
 `
 
 <https://github.com/InCar/demo/tree/master/packages/websrv-feature1>
+<https://github.com/InCar/demo/tree/master/packages/websrv-feature2>
