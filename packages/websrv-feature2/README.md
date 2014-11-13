@@ -5,9 +5,10 @@ websrv-feature2是一个客户端AngularJS模块示例
 [f2B.js](https://github.com/InCar/demo/blob/master/packages/websrv-feature2/html/f2B.js)
 定义了2个AngularJS.directive,它们被@test/websrv-feature1集成使用
 
-模块使用[requirejs](https://github.com/jrburke/requirejs)加载
-请参考
+模块使用[requirejs](https://github.com/jrburke/requirejs)加载,请参考
+
 <https://github.com/InCar/demo/blob/master/packages/websrv-feature1/html/f2.html>
+
 <https://github.com/InCar/demo/blob/master/packages/websrv-feature1/html/scripts/f2.js>
 
 ## 运行此示例
