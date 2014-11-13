@@ -1,6 +1,6 @@
 {
   "name": "@test/websrv-feature1",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "feature1",
   "main": "index.js",
   "scripts": {
@@ -13,6 +13,7 @@
   "author": "ghxiong",
   "license": "MIT",
   "dependencies": {
+    "@test/websrv-feature2": "^1.0.0",
     "debug": "^2.1.0",
     "express": "^4.10.2"
   }
