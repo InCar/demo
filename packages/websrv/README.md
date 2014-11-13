@@ -7,6 +7,7 @@ websrv本身并不承担任何具体的功能.
 websrv使用了websrv-feature1模块,
 websrv-feature1是一个精简的功能模块
 websrv通过express的级联能力来使用websrv-feature1模块
+websrv-feature1内部使用了websrv-feature2的功能
 
 ```javascript
 var Express = require('express');
