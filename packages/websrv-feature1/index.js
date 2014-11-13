@@ -10,6 +10,7 @@ app.get('/api/node-version', nodeVersion.getNodeVersion);
 
 // 比如,外部使用者定义模块根路由是/web,那么index.html的完整路由是/web/index.html
 app.use('/', Express.static(__dirname + '/html'));
+// 这里集成了另外一个模块 @test/websrv-feature2 里的功能
 app.use('/f2', feature2);
 
 module.exports = app;

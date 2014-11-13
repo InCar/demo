@@ -12,7 +12,7 @@ requirejs.config({
     }
 });
 
-requirejs(['angular', 'angularResource', '../f2/f2A', '../f2/f2B'], function(angular, res, f2A){
+requirejs(['angular', 'angularResource', '../f2/f2A', '../f2/f2B'], function(angular){
     angular.module('f2', ['ngResource', 'feature2'])
         .controller('f2Ctrl', ['$scope', '$resource', function ($scope, $resource) {
             $scope.data2B = {
