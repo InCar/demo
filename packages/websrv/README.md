@@ -24,4 +24,5 @@ cd demo/packages/websrv
 npm install
 set DEBUG=@test/*
 npm run test
+start http://localhost:51234
 ```

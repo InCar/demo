@@ -61,3 +61,15 @@ npm link通过建立符号链接来保持子模块的同步,这样不需要频�
 ```shell
 npm unlink @test/websrv-feature1
 ```
+
+## HTML
+### /index.html
+示例页面
+展示一个静态的图片,一段可以变换颜色的文字,服务端NODEJS版本信息
+
+### /f2.html
+示例页面,示范使用@test/websrv-feature2中定义的2个AngularJS.Directive
+
+## API
+### GET /api/node-version
+返回服务端NODEJS版本信息
