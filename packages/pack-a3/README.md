@@ -68,7 +68,7 @@
 ### PackA3.Core()
 实例化Core对象
 
-```
+```javascript
     var PackA3 = require('@test/pack-a3');
     var core = new PackA3.Core();
 ```
@@ -76,7 +76,7 @@
 ### core.where(list, properties)
 按属性过滤
 
-**list** Array<Object> 被过滤的对象列表
+**list** Array 被过滤的对象列表  
 **properties** Object 过滤条件
 
 ```javascript
@@ -89,7 +89,7 @@
 **list** Array<Object> 被排序列表
 **iteratee**  function(obj){ return value; } 排序依据
 
-```javacript
+```javascript
     var sorted = core.sortBy([{name:'Mike'}, {name:'Jack'}, {name:'Mike'}],
         function(obj){ return obj.name; });
 ```

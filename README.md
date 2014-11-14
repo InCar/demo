@@ -10,4 +10,4 @@
 * [@test/websrv-feature1](https://github.com/InCar/demo/tree/master/packages/websrv-feature1) 模块化的网站,示范客户端网站和脚本以及服务器端API
 * [@test/websrv-feature2](https://github.com/InCar/demo/tree/master/packages/websrv-feature2) 示范模块化的AngularJS指令
 
-请模块的链接查看详细介绍
+点击上面模块的链接查看详细介绍
