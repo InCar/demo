@@ -30,9 +30,9 @@ var debug = require('debug')('@test/websrv-feature2');
 当DEBUG环境变量设置好后,即可以看到调试信息的输出
 
 ```shell
-export DEBUG=@test/websrv-feature1 # LINUX
+export DEBUG=@test/websrv-feature2 # LINUX
 或
-set DEBUG=@test/websrv-feature1 # Windows
+set DEBUG=@test/websrv-feature2 # Windows
 ```
 
 ## 开发过程中测试模块
