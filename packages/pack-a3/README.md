@@ -76,7 +76,7 @@
 ### core.where(list, properties)
 按属性过滤
 
-**list** Array 被过滤的对象列表  
+**list** Array 被过滤的对象列表
 **properties** Object 过滤条件
 
 ```javascript
@@ -86,7 +86,7 @@
 ### core.sortBy(list, iteratee)
 排序
 
-**list** Array<Object> 被排序列表
+**list** Array<Object> 被排序列表  
 **iteratee**  function(obj){ return value; } 排序依据
 
 ```javascript
