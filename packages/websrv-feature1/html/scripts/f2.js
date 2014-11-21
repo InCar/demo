@@ -20,7 +20,7 @@ requirejs(['angular', 'angularResource', '../f2/f2A', '../f2/f2B'], function(ang
                 text: '正在获取....'
             };
 
-            var apiNodeVersion = $resource('/api/node-version');
+            var apiNodeVersion = $resource('api/node-version');
             apiNodeVersion.get(null).$promise
                 .then(function(version){
                     $scope.data2B.text = JSON.stringify(version);
